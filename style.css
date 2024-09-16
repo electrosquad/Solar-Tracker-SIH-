@@ -95,6 +95,7 @@ button:hover {
 .container{
     height: 100vh;
     width: 100vw;
+    overflow-y: scroll;
 }
 /* Main Container */
 .main-container {
@@ -105,7 +106,6 @@ button:hover {
     color: #717388;
     font-size: 1.2rem;
     display: flex;
-
     justify-content: space-between;
     background: rgba(107, 107, 107, 0.1);
     border-radius: 8px;
@@ -120,7 +120,7 @@ button:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     width: 30%;
-    height: 120%; /* Adjusted height for larger charts */
+    height: 100%; /* Adjusted height for larger charts */
 }
 
 .chart-container h2 {
@@ -131,7 +131,7 @@ button:hover {
 /* Chart Canvas */
 canvas {
     width: 100% !important; /* Make sure canvas takes full width */
-    height: 60% !important; /* Make sure canvas takes full height */
+    height: 80% !important; /* Make sure canvas takes full height */
     display: block; /* Ensure canvas is displayed as a block element */
     background-color: #ffffff;
     border-radius: 8px;
@@ -142,7 +142,7 @@ canvas {
 
 /* Grid Item Styles */
 .grid-item {
-    display: flexbox;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -158,52 +158,50 @@ canvas {
 }
 
 /* Responsive Layout Adjustments */
-@media (max-width: 768px) {
-    .main-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    #navbar {
+@media (max-width: 1200px) {
+    
+   
+    .main-container{
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    a {
-        margin: 5px 0;
-    }
-}
-/* ... (rest of the code remains the same) */
-
-/* Responsive Layout Adjustments */
-@media (max-width: 768px) {
-    .main-container {
+        align-items: center;
+        justify-content: center;
+        height: 230vh;
+        width: 100%;
         grid-template-columns: 1fr;
+        
     }
-    .chart-container {
-        width: 45%; /* adjust the width for smaller screens */
+    .chart-container{
+        margin-bottom: 15px;
+        width: 83vw;
     }
+
 }
 
-@media (max-width: 480px) {
-    #navbar {
-        flex-direction: column;
-        align-items: flex-start;
+@media (max-width: 500px) {
+    #navbar{
+        padding: 0;
     }
-    a {
-        margin: 5px 0;
+    a{
+        margin: 2px;
+        padding: 0 2px;
+       
     }
-    .chart-container {
-        width: 90%; /* adjust the width for smaller screens */
-    }
-}
-
-@media (max-width: 320px) {
     .main-container {
-        padding: 1rem; /* reduce padding for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 170vh;
+        width: 100%;
+       
     }
-    .chart-container {
-        width: 100%; /* make charts full-width on smallest screens */
+    .chart-container{
+        margin-bottom: 15px;
+        width: 87vw;
+        height: 51vh;
     }
 }
+
+
+
