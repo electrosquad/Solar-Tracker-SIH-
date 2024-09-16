@@ -182,6 +182,9 @@ canvas {
     #navbar{
         padding: 0;
     }
+    h1 {
+        font-size: 4em;
+    }
     a{
         margin: 2px;
         padding: 0 2px;
