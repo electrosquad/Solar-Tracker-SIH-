@@ -174,3 +174,36 @@ canvas {
         margin: 5px 0;
     }
 }
+/* ... (rest of the code remains the same) */
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .chart-container {
+        width: 45%; /* adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    a {
+        margin: 5px 0;
+    }
+    .chart-container {
+        width: 90%; /* adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .main-container {
+        padding: 1rem; /* reduce padding for smaller screens */
+    }
+    .chart-container {
+        width: 100%; /* make charts full-width on smallest screens */
+    }
+}
